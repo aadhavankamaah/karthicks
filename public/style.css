@@ -1,0 +1,158 @@
+*{
+    margin: 0; padding: 0; box-sizing: border-box; outline: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f1f1f1;
+    font-size: 62.5%;
+}
+
+.xyzc{
+    display: flex;
+    justify-content: end;
+    padding: 1rem 2rem;
+}
+.xyzc a{
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+}
+.xyzc a span{
+    background: crimson;
+    padding: .5rem 1rem;
+    margin-left: 1rem;
+    color: white;
+    font-weight: 500;
+    border-radius: .5rem;
+}
+
+.front-container{
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+.front-container .main-content{
+    text-align: center;
+}
+.content span{
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+.content h1{
+    font-size: 2.4rem;
+    margin-top: 1rem;
+}
+.content h2{
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+.search{
+    margin-top: 2rem;
+}
+.search input{
+    width: 40rem;
+    
+    font-size: 1.6rem;
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+    border: 1px solid #ccc;
+    padding: 1rem 2rem;
+}
+.search button{
+    background-color: #333;
+    color: #fff;
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    border: 1px solid #333;
+    cursor: pointer;
+}
+
+/* break */
+
+.detail-form-container{
+    background: rgba(0, 0, 0, .85);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+}
+
+.detail-form-container .fa-xmark{
+    font-size: 2rem;
+    position: absolute;
+    right: 3rem; top: 2rem;
+    color: whitesmoke;
+    background: crimson;
+    padding: .5rem .8rem;
+    cursor: pointer;
+}
+
+.detail-form{
+    background-color: #9AA6B2;
+    width: 70%;
+    color: #232D3F;
+    padding: 1rem;
+    top: 0;
+}
+.detail-form h2{
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.detail-form .inquiry-info-form label{
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.pricedateinfo{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.inquiry-info-form input,
+.inquiry-info-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: #333;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.inquiry-info-form button {
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #0066cc;
+    border: none;
+    border-radius: 5px;
+    align-self: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .inquiry-info-form button:hover {
+    background-color: #004999;
+  }
+  
+
+.inquiry-info-form{    
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    
+}

@@ -1,0 +1,47 @@
+html{font-size: 62.5%;}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{ width: 100%;}
+.header .container{text-align: center; width: 85%; margin: 0 auto;}
+.header .container .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .container .navbar .logo,
+.header .container .navbar .user-login{
+    font-size: 18px;
+}
+.navbar nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar nav ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+.navbar nav ul li{list-style: none;}
+
+/* client-page */
+.client-page{
+    width: 85%;
+    margin: 0 auto;
+}
+.client-page h2{
+    font-size: 2.4rem;
+    margin-top: 2rem;
+}
+.client-page p{
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}

@@ -1,0 +1,10 @@
+<%-include('../partials/header') %>
+<hr/>
+<div class="client-page">
+    <h2>Available Customer demand</h2>
+    <% post.forEach(post => { %>
+        <div class="post">
+            <p><a href="#"><%=post%></a></p>
+        </div>
+        <% }) %>
+</div>
