@@ -1,23 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap');
+
 html{font-size: 62.5%;}
 
-body{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: black;
 }
 
-.header{ width: 100%;}
+.header{ width: 100%; background-color: black;}
 .header .container{text-align: center; width: 85%; margin: 0 auto;}
 .header .container .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 6rem;
+    color: white;
 }
-.header .container .navbar .logo,
-.header .container .navbar .user-login{
-    font-size: 18px;
+.header .container .navbar .logo{
+    font-weight: 800;
+    font-size: 2.4rem;
 }
+
+.header .container .navbar .logo p{
+    color: white;
+    font-family: "Playwrite IN", serif;
+}
+
+.header .container .navbar .user-login a{
+    background: crimson;
+    padding: .8rem 1.5rem;
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    border-radius: 5rem;
+}
+
 .navbar nav ul{
     display: flex;
     justify-content: space-between;
@@ -29,6 +50,7 @@ body{
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
+    color: aliceblue;
 }
 .navbar nav ul li{list-style: none;}
 
@@ -40,6 +62,17 @@ body{
 .client-page h2{
     font-size: 2.4rem;
     margin-top: 2rem;
+}
+
+.client-page .post{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: .5rem 2rem;
+    margin: 20px 0;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
 }
 .client-page p{
     font-size: 1.6rem;

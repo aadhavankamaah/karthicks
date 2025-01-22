@@ -13,13 +13,17 @@ app.get('/', (req, res) => {
   res.sendFile('index.html');
 });
 
-app.post('/home', (req, res) => {
-  const post = req.body.text;
-  posts.unshift(post);
-  res.render("partials/home.ejs", {
-    post: posts  
-  })
+app.post('/info-form', (req, res) => {
+  const data = req.body.text;
+  res.render("partials/initialform.ejs", {subject: data});
 });
+
+app.post("/home", (req, res) => {
+  const {subject, deadline, price, contact, description} = req.body;
+  const content = {subject, deadline, price, contact, description};
+  posts.unshift(content);
+  res.render("partials/home.ejs", {post: posts});
+})
 
 app.get('/home', (req, res) => {
   res.render('home.ejs');

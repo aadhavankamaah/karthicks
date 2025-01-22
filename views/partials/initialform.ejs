@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="inquiry.css">
+</head>
+<body>
+    <div class="detail-form-container">
+        <div class="detail-form">
+            <h2>Detail Form</h2>
+            <form action="/home" method="post" class="inquiry-info-form" id="inquiry-form">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" value="<%=subject%>" name="subject">
+                <div class="pricedateinfo">
+                    <label for="deadline">Deadline</label>
+                    <input type="date" name="deadline" id="deadline">
+                    <label for="price">Offer amount</label>
+                    <input type="number" name="price" id="price">
+                </div>
+                <label for="contact">Contact Number/Email-Id</label>
+                <input type="text" name="contact" id="contact">
+                <label for="description">Description</label>
+                <textarea name="description" id="content-specificity" placeholder="Enter additional information and your potential expectation." cols="40" rows="5"></textarea>
+                <button type="submit"> Submit </button>
+            </form>
+        </div>
+    </div>
+<script src="/form.js"></script>
+</body>
+</html>
