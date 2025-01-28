@@ -22,11 +22,12 @@ app.post("/home", (req, res) => {
   const {subject, deadline, price, contact, description} = req.body;
   const content = {subject, deadline, price, contact, description};
   posts.unshift(content);
-  res.render("partials/home.ejs", {post: posts});
+  res.redirect("/home");
+  // res.render("partials/home.ejs", {post: posts});
 })
 
 app.get('/home', (req, res) => {
-  res.render('home.ejs');
+  res.render('partials/home.ejs', {post: posts});
 });
 
 app.listen(PORT, () => {
