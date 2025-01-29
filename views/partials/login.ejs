@@ -1,0 +1,24 @@
+<%-include("../partials/header.ejs")%>
+<div class="login-layout">
+    <header>
+        <h2>Sign In</h2> 
+    </header>
+    <form action="#">
+        <div class="input-container">
+            <input type="email" autocomplete="email" required>
+            <label for="">Email or mobile number</label>
+        </div>
+        <div class="input-container">
+            <input type="password" name="password" id="password" required>
+            <label for="password">Password</label>
+        </div>
+        <button>Sign In</button>
+    </form>
+    <a href="#">Forgot password?</a>
+    <div class="pass-store">
+        <input type="checkbox" name="Remember-me" id="Remember-me">
+        <label for="Remember-me">Remember me</label>
+    </div>
+    <p>New to CartCane? <a href="/signup">Sign up now </a></p>
+</div>
+

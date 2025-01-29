@@ -78,3 +78,53 @@ html{font-size: 62.5%;}
     font-size: 1.6rem;
     margin-top: 1rem;
 }
+
+/* login-page */
+
+.login-layout{
+    display: flex;
+    flex-direction: column;
+    height: 89vh;
+    width: 35%;
+    margin: 0 auto;
+    /* align-items: ; */
+    justify-content: center;
+}
+.login-layout form{
+    display: flex;
+    flex-direction: column;
+}
+.input-container{
+    position: relative;
+    margin-bottom: 2rem;
+}
+.input-container input{
+    width: 100%;
+    padding: 1rem;
+    border: .2rem solid #ccc;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    outline: none;
+}
+.input-container label{
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    padding: 0 .5rem;
+    color: grey;
+    transition: 0.3s;
+    pointer-events: none;
+}
+.input-container input:focus + label,
+.input-container input:valid + label {
+    top: 0;
+    font-size: 0.8rem;
+    color: #000;
+}
+.pass-store label,
+.login-layout p,
+.login-layout a{
+    font-size: 1.6rem;
+}

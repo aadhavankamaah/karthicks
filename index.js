@@ -30,6 +30,10 @@ app.get('/home', (req, res) => {
   res.render('partials/home.ejs', {post: posts});
 });
 
+app.get('/login', (req, res) => {
+  res.render('partials/login.ejs')
+})
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

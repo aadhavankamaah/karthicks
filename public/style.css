@@ -25,7 +25,7 @@ body{
     color: #333;
     font-size: 1rem;
 }
-.xyzc a span{
+.xyzc .auth_sec a{
     background: crimson;
     padding: .5rem 1rem;
     margin-left: 1rem;
