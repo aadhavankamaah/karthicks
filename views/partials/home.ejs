@@ -1,14 +1,19 @@
 <%-include('../partials/header') %>
 <hr/>
 <div class="client-page">
-    <h2>Available Customer demand</h2>
-    <% post.forEach(post => { %>
-        <div class="post">
-            <p>Subject: <a href="#"><%=post.subject%></a></p>
-            <p>Deadline: <a href="#"> <%=post.deadline%></a></p>
-            <p>Offer-price: <a href="#"> <%=post.price%></a></p>
-            <p>Contact: <a href="#"> <%=post.contact%></a></p>
-            <p>Description: <a href="#"> <%=post.description%></a></p>
-        </div>
-    <%})%> 
+    <%if (post.length>0) {%>
+        <h2>Available Customer demand</h2>
+        <% post.forEach(post => { %>
+            <div class="post">
+                <p>Subject: <a href="#"><%=post.subject%></a></p>
+                <p>Deadline: <a href="#"> <%=post.deadline%></a></p>
+                <p>Offer-price: <a href="#"> <%=post.price%></a></p>
+                <p>Contact: <a href="#"> <%=post.contact%></a></p>
+                <p>Description: <a href="#"> <%=post.description%></a></p>
+            </div>
+        <%})%> 
+    <%} else {%>
+        <h2>Regret! No post has been made.</h2>
+    <%}%>
+    
 </div>

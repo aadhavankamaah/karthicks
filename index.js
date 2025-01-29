@@ -32,6 +32,9 @@ app.get('/home', (req, res) => {
 
 app.get('/login', (req, res) => {
   res.render('partials/login.ejs')
+});
+app.get('/sign-up', (req, res) => {
+  res.render('partials/signup.ejs')
 })
 
 app.listen(PORT, () => {

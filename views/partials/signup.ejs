@@ -1,0 +1,32 @@
+<%-include("../partials/header.ejs")%>
+<div class="signup-sec">
+    <div class="signup-container">
+        <header>
+            <h2 class="form-head">Create Account</h2>
+        </header>
+        <form>
+            <div class="input-container">
+                <input type="number" name="contact" class="input-field" id="contact" required>
+                <label for="">Mobile number</label>
+            </div>
+            <div class="input-container">
+                <input type="text" class="input-field" required>
+                <label for="">Name</label>
+            </div>
+            <div class="input-container">
+                <input type="email" class="input-field" required>
+                <label for="">Email</label>
+            </div>  
+            <div class="input-container">
+                <input type="password" class="input-field" required>
+                <label for="">Password</label>
+            </div>
+            <div class="info-option">
+                <i class="fa-solid fa-circle-info"></i>
+                <p>Passwords must be at least 6 characters.</p>
+            </div>
+            <p class="phone-verify">To verify your number, we will send you a text message with a temporary code. Message and data rates may apply.</p>
+            <button type="submit" class="btn">Verify mobile number</button>
+        </form>
+    </div>
+</div>
