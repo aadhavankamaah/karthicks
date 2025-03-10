@@ -4,22 +4,22 @@
         <header>
             <h2 class="form-head">Create Account</h2>
         </header>
-        <form>
+        <form action="/signup" method="post">
             <div class="input-container">
-                <input type="number" name="contact" class="input-field" id="contact" required>
-                <label for="">Mobile number</label>
+                <input type="number" name="phone" class="input-field" id="contact" required>
+                <label for="contact">Mobile number</label>
             </div>
             <div class="input-container">
-                <input type="text" class="input-field" required>
-                <label for="">Name</label>
+                <input type="text" name="name" class="input-field" id="name" required>
+                <label for="name">Name</label>
             </div>
             <div class="input-container">
-                <input type="email" class="input-field" required>
-                <label for="">Email</label>
+                <input type="email" name="email" class="input-field" required>
+                <label>Email</label>
             </div>  
             <div class="input-container">
-                <input type="password" class="input-field" required>
-                <label for="">Password</label>
+                <input type="password" name="password" class="input-field" required>
+                <label>Password</label>
             </div>
             <div class="info-option">
                 <i class="fa-solid fa-circle-info"></i>
