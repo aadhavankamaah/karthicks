@@ -17,7 +17,7 @@
                     <ul id="MenuItems">
                         <li><a href="/">Register</a></li>
                         <li><a href="/home">Home</a></li>
-                        <li><a href="/categories">Category</a></li>
+                        <li><a class="category" onClick="show()">Category</a></li>
                         <li><a href="/about">About</a></li>
                         <li><a href="/contact">Contact</a></li>
                         <li><a href="/account">Account</a></li>
@@ -30,5 +30,23 @@
             </div>
         </div>
     </div>
+    <div class="category_list show">
+        <ol class="cat_list">
+            <li><a href="#">Personal Care</a></li>
+            <li><a href="#">Household Tasks</a></li>
+            <li><a href="#">Work & Career</a></li>
+            <li><a href="#">Education and Learning</a></li>
+            <li><a href="#">Social & Relationships</a></li>
+            <li><a href="#">Leisure & Entertainment</a></li>
+            <li><a href="#">Health & Fitness</a></li>
+            <li><a href="#">Travel & Commuting</a></li>
+            <li><a href="#">Community & Social Service</a></li>
+        </ol>
+    </div>
+    <script>
+        function show(){
+            document.querySelector(".category_list").classList.toggle("show");
+        }
+    </script>
 </body>
 </html>

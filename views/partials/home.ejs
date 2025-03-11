@@ -6,10 +6,11 @@
         <% post.forEach(post => { %>
             <div class="post">
                 <p>Subject: <a href="#"><%=post.subject%></a></p>
-                <p>Deadline: <a href="#"> <%=post.deadline%></a></p>
-                <p>Offer-price: <a href="#"> <%=post.price%></a></p>
-                <p>Contact: <a href="#"> <%=post.contact%></a></p>
+                <p>Deadline: <a href="#"> <%=post.deadline.toISOString().split("T")[0]%></a></p>
+                <p>Offer-price: <a href="#"> <%=post.payment%></a></p>
+                <p>Contact: <a href="#"> <%=post.phone%></a></p>
                 <p>Description: <a href="#"> <%=post.description%></a></p>
+                <a href="#" class="access-btn">Accept</a>
             </div>
         <%})%> 
     <%} else {%>
