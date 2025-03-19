@@ -19,8 +19,16 @@ const db = new pg.Client({
 
 db.connect();
 
+let userEntered = false;
+
+async function clientData(){
+  const data = await db.query("SELECT * FROM user_data ORDER BY id DESC");
+  let posts = data.rows;
+  return posts;
+}
+
 app.get('/', (req, res) => {
-  res.sendFile('index.html');
+  res.render('partials/index.ejs', {profile:userEntered});
 });
 
 app.post('/info-form', (req, res) => {
@@ -40,9 +48,8 @@ app.post("/home", async(req, res) => {
 })
 
 app.get('/home', async(req, res) => {
-  const data = await db.query("SELECT * FROM user_data ORDER BY id DESC");
-  let posts = data.rows;
-  res.render('partials/home.ejs', {post: posts});
+  const client = await clientData();
+  res.render('partials/home.ejs', {post: client, profile:userEntered});
 });
 
 app.get('/login', (req, res) => {
@@ -57,8 +64,24 @@ app.post('/signup', async(req, res) => {
   const {phone, name, email, password} = req.body;
   console.log(phone, name, password, email);
   await db.query("INSERT INTO clients_data (phone, name, email, password) VALUES ($1, $2, $3, $4)", [phone, name, email, password]);
-  res.redirect("/login");
+  if (req.body.phone){
+    userEntered = true;
+  } else {
+    userEntered = false;
+  }
+  res.render("header.ejs", {profile: userEntered, username: name});
 });
+
+app.post('/login', async(req, res)=>{
+  const data = req.body;
+  if (data) {
+    userEntered  = true;
+  } else {
+    userEntered = false;
+  };
+  const client = await clientData();
+  res.render("partials/home.ejs", {post: client, profile: userEntered});
+})
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/ab6c0d0e2c.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="/style/main.css">
 </head>
 <body>
     <div class="header">
@@ -20,13 +20,20 @@
                         <li><a class="category" onClick="show()">Category</a></li>
                         <li><a href="/about">About</a></li>
                         <li><a href="/contact">Contact</a></li>
-                        <li><a href="/account">Account</a></li>
+                        <li><a href="/support">Support</a></li>
                     </ul>
                 </nav>
-                <div class="user-login">
-                    <a href="/login">Log in</a>
-                    <a href="/sign-up">Sign up</a>
-                </div>
+               <% if (locals.profile) {%>
+                    <div class="user-profile">
+                        <img src="/images/avatar.png" alt="profile_img">
+                        <p style="color: wheat;">&#9660</p>
+                    </div>
+                <% } else {%>
+                    <div class="user-login">
+                        <a href="/login">Log in</a>
+                        <a href="/sign-up">Sign up</a>
+                    </div>
+                <% } %>
             </div>
         </div>
     </div>
