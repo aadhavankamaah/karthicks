@@ -11,7 +11,7 @@
     <header class="xyzc">
         <div class="client-view">
             <div class="logo">
-                <a href="/"><p style="font-size: 1.8rem">CartCane</p></a>
+                <a href="/"><p style="font-size: 2.4rem">CartCane</p></a>
             </div>
             <div class="menu">
                 <a href="/home">Home</a>
@@ -24,12 +24,15 @@
                 <div class="user-container">
                     <div class="user-profile">
                         <img src="/images/avatar.png" alt="profile_img">
-                        <p style="color: wheat;">&#9660</p>
                     </div>
-                    <div class="user-dropdown" id="userDropdown">
-                        <a href="/profile">Edit Profile</a>
-                        <a href="/settings">Settings</a>
-                        <a href="#" onclick="logout()">Logout</a>
+                    <div class="user-dropdown hide" id="userDropdown">
+                        <img src="/images/avatar.png" alt="profile_img">
+                        <h2>Hi, <%locals.name%></h2>
+                        <p class="pqrs">Manage your Account</p>
+                        <div class="logout">
+                            <a class="lick" href="/settings">Settings</a>
+                            <a class="lick" href="#" onclick="logout()">Logout</a>
+                        </div>
                     </div>
                 </div>
             <% } else {%>
@@ -51,7 +54,6 @@
                 <input type="text" name="text" placeholder="Search here">
                 <button type="submit">Register</button>
             </form>
-            <p class="sanjay">Hi there!</p>
         </div>
     </div>
     

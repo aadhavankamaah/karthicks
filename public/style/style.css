@@ -4,17 +4,20 @@
     margin: 0; padding: 0; box-sizing: border-box; outline: none;
 }
 
+html{
+    font-size: 62.5%;
+}
+
 body{
     font-family: 'Poppins', sans-serif;
     background-color: #f1f1f1;
-    font-size: 62.5%;
 }
 
 .xyzc{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1.6rem 2.6rem;
 }
 
 .client-view{
@@ -24,80 +27,35 @@ body{
 .xyzc .logo{
     font-family: "Playwrite IN", serif;
     font-weight: 800;
+    margin-right: 10rem;
 }
 .xyzc a{
     text-decoration: none;
     color: #333;
-    font-size: 1rem;
-}
-.xyzc .auth_sec a{
-    background: crimson;
-    padding: .5rem 1rem;
-    margin-left: 1rem;
-    color: white;
-    font-weight: 500;
-    border-radius: .5rem;
-}
-
-.client-auth{
-    
-}
-
-.user-profile {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-.user-profile img{
-    height: 3rem;
-    border-radius: 50%;
-}
-
-.user-container {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.user-dropdown {
-    position: absolute;
-    top: 50px; /* Adjust position below the icon */
-    right: 0;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 200px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    display: none; /* Initially hidden */
-    z-index: 1000;
-}
-
-.user-dropdown a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: #333;
-    transition: background 0.2s;
-}
-
-.user-dropdown a:hover {
-    background-color: #f1f1f1;
-}
-
-.menu{
-    margin-left: 7rem;
+    font-size: 1.6rem;
 }
 
 .menu a{
     cursor: pointer;
-    margin-left: 3rem;
-    font-size: 1.2rem;
+    margin-left: 3.6rem;
+    font-size: 2rem;
     font-weight: 600;
 }
 .menu a:hover{
     text-decoration: underline;
 }
 
+.xyzc .auth_sec a{
+    background: crimson;
+    padding: 1.1rem 1.6rem;
+    margin-left: 1.6rem;
+    color: white;
+    font-weight: 500;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+}
+
+/* front-container */
 .front-container{
     display: flex;
     height: 80vh;
@@ -112,133 +70,118 @@ body{
     text-decoration: underline;
 }
 .content h1{
-    font-size: 2.4rem;
+    font-size: 3rem;
     margin-top: 1rem;
 }
 .content h2{
-    font-size: 1.6rem;
+    font-size: 2.2rem;
     margin-top: 1rem;
 }
 .search{
     margin-top: 2rem;
 }
 .search input{
-    width: 40rem;
+    width: 56rem;
     
-    font-size: 1.6rem;
-    border-top-left-radius: .5rem;
-    border-bottom-left-radius: .5rem;
+    font-size: 2.6rem;
+    border-top-left-radius: .8rem;
+    border-bottom-left-radius: .8rem;
     border: 1px solid #ccc;
-    padding: 1rem 2rem;
+    padding: 1.6rem 2.6rem;
 }
 .search button{
     background-color: #333;
     color: #fff;
-    font-size: 1.6rem;
-    padding: 1rem 2rem;
-    border-top-right-radius: .5rem;
-    border-bottom-right-radius: .5rem;
+    font-size: 2.2rem;
+    padding: 1.6rem 2.6rem;
+    border-top-right-radius: .8rem;
+    border-bottom-right-radius: .8rem;
     border: 1px solid #333;
     cursor: pointer;
 }
+/* front-container ends */
 
-/* break */
-
-.detail-form-container{
-    background: rgba(0, 0, 0, .85);
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    display: none;
+.user-profile {
+    display: flex;
     align-items: center;
-    justify-content: center;
-    top: 0;
+    cursor: pointer;
+}
+.user-profile img{
+    height: 4rem;
+    border-radius: 50%;
 }
 
-.detail-form-container .fa-xmark{
-    font-size: 2rem;
+.user-container {
+    position: relative;
+    display: inline-block;
+}
+
+.user-dropdown {
     position: absolute;
-    right: 3rem; top: 2rem;
-    color: whitesmoke;
-    background: crimson;
-    padding: .5rem .8rem;
-    cursor: pointer;
-}
-
-.detail-form{
-    background-color: #9AA6B2;
-    width: 70%;
-    color: #232D3F;
-    padding: 1rem;
-    top: 0;
-}
-.detail-form h2{
-    text-align: center;
-    font-size: 1.8rem;
-}
-
-.detail-form .inquiry-info-form label{
-    margin-top: 1.5rem;
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-.pricedateinfo{
-    margin-top: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    gap: 1rem;
-}
-
-.inquiry-info-form input,
-.inquiry-info-form textarea {
-  width: 100%;
-  padding: 0.5rem;
-  font-size: 1rem;
-  color: #333;
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.inquiry-info-form button {
-    margin-top: 1rem;
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-    color: white;
-    background-color: #0066cc;
-    border: none;
-    border-radius: 5px;
-    align-self: center;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  .inquiry-info-form button:hover {
-    background-color: #004999;
-  }
-  
-
-.inquiry-info-form{    
-    display: flex;
+    top: 50px; /* Adjust position below the icon */
+    right: 0;
+    padding: 5rem 2rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 40rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex; 
     flex-direction: column;
-    align-items: start;
-    
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    z-index: 1000;
 }
 
-/* add-on */
-.sanjay{
-    font-size: 1.5rem;
-    display: none;
-    margin-top: 1rem;
-    background: black;  
-    color: #fff;
-    padding: 1rem 2rem;
-    justify-self: start;
+.user-dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.user-dropdown a:hover {
+    background-color: #f1f1f1;
+}
+
+.user-dropdown img{
+    height: 10rem;
+    border-radius: 50%;
+};
+
+.user-dropdown .pqrs{
+    border: .1rem solid #333;
+    border-radius: 5rem;
+    padding: 1rem 7rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.user-dropdown p:hover{
+    background-color: #E0F4FF;
+}
+
+.user-dropdown .logout{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    gap: .1rem;
+}
+
+.lick{
+    background-color: #fff;
+    width: 55rem;
+    border-top-left-radius: 2rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+    font-weight: 500;
 }
 
 .show{
     display: block;
+}
+
+.hide{
+    display: none;
 }

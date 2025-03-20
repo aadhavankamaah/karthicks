@@ -24,9 +24,19 @@
                     </ul>
                 </nav>
                <% if (locals.profile) {%>
-                    <div class="user-profile">
-                        <img src="/images/avatar.png" alt="profile_img">
-                        <p style="color: wheat;">&#9660</p>
+                    <div class="user-container" onclick="profileShow()">
+                        <div class="user-profile">
+                            <img src="/images/avatar.png" alt="profile_img">
+                        </div>
+                        <div class="user-dropdown" id="userDropdown">
+                            <img src="/images/avatar.png" alt="profile_img">
+                            <h2>Hi, <%locals.name%></h2>
+                            <p>Manage your Account</p>
+                            <div class="logout">
+                                <a class="lick" href="/settings">Settings</a>
+                                <a class="lick" href="#" onclick="logout()">Logout</a>
+                            </div>
+                        </div>
                     </div>
                 <% } else {%>
                     <div class="user-login">
@@ -37,7 +47,7 @@
             </div>
         </div>
     </div>
-    <div class="category_list show">
+    <div class="category_list hide">
         <ol class="cat_list">
             <li><a href="#">Personal Care</a></li>
             <li><a href="#">Household Tasks</a></li>
@@ -52,7 +62,11 @@
     </div>
     <script>
         function show(){
-            document.querySelector(".category_list").classList.toggle("show");
+            document.querySelector(".category_list").classList.toggle("hide");
+        }
+
+        function profileShow(){
+            document.getElementById("userDropdown").classList.toggle("show");
         }
     </script>
 </body>
