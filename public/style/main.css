@@ -90,7 +90,7 @@ html{font-size: 62.5%;}
     background-color: #C4D9FF;
     border: 1px solid #ccc;
     border-radius: 1rem;
-    width: 40rem; 
+    width: 35rem; 
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     display: none; /* Initially hidden */
     flex-direction: column;
@@ -113,7 +113,7 @@ html{font-size: 62.5%;}
 }
 
 .user-dropdown h2{
-    font-size: 2.8rem;
+    font-size: 2rem;
 }
 .user-dropdown img{
     height: 10rem;
@@ -124,7 +124,7 @@ html{font-size: 62.5%;}
     border: .1rem solid #333;
     border-radius: 5rem;
     padding: 1rem 7rem;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 500;
     cursor: pointer;
 }
@@ -136,15 +136,25 @@ html{font-size: 62.5%;}
     display: flex;
     justify-content: space-around;
     width: 100%;
-    gap: .1rem;
+    gap: .2rem;
 }
 
-.lick{
+.lick-1{
     background-color: #fff;
     width: 55rem;
+    text-align: center;
     border-top-left-radius: 2rem;
-    border-radius: 1rem;
-    font-size: 2rem;
+    border-bottom-left-radius: 2rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.lick-2{
+    background-color: #fff;
+    text-align: center;
+    width: 55rem;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    font-size: 1.8rem;
     font-weight: 500;
 }
 

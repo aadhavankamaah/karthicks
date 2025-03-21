@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1{
+            color: white;
+        }
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            color: #444;
+        }
+        .mission-vision {
+            display: flex;
+            justify-content: space-between;
+        }
+        .mission, .vision {
+            width: 48%;
+        }
+        .contact-info {
+            text-align: center;
+        }
+    </style>
+</head>
+<%-include("../partials/header.ejs")%>
+<body>
+    <header>
+        <h1>About Us</h1>
+    </header>
+    
+    <section class="company-intro">
+        <h2>Who We Are</h2>
+        <p> <!-- Add your company introduction here --> </p>
+    </section>
+    
+    <section class="mission-vision">
+        <div class="mission">
+            <h2>Our Mission</h2>
+            <p> <!-- Add your mission statement here --> </p>
+        </div>
+        <div class="vision">
+            <h2>Our Vision</h2>
+            <p> <!-- Add your vision statement here --> </p>
+        </div>
+    </section>
+    
+    <section class="team">
+        <h2>Meet Our Team</h2>
+        <p> <!-- Add team details or images here --> </p>
+    </section>
+    
+    <section class="contact-info">
+        <h2>Contact Us</h2>
+        <p> <!-- Add contact details here --> </p>
+    </section>
+</body>
+</html>

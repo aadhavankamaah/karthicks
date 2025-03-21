@@ -83,6 +83,10 @@ app.post('/login', async(req, res)=>{
   res.render("partials/home.ejs", {post: client, profile: userEntered});
 })
 
+app.get("/about", (req, res)=>{
+  res.render("partials/about.ejs")
+})
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
